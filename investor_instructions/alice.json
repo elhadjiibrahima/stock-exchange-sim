@@ -1,0 +1,23 @@
+{
+    "id": 100001,
+    "password": "password_alice",
+    "instructions": [
+      {
+        "ticker": "MSFT",
+        "direction": "Buy",
+        "size": 100,
+        "price": 250.0,
+        "limit_or_market": "Limit",
+        "time_in_force": "Day"
+      },
+      {
+        "ticker": "GOOGL",
+        "direction": "Sell",
+        "size": 50,
+        "price": 0,
+        "limit_or_market": "Market",
+        "time_in_force": "Day"
+      }
+    ]
+  }
+  

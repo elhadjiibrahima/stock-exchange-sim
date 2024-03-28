@@ -1,0 +1,31 @@
+[package]
+name = "ses"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "server"
+path = "bin/bin_server.rs"
+
+[[bin]]
+name = "investor"
+path = "bin/bin_investor.rs"
+
+[[bin]]
+name = "subscriber"
+path = "bin/bin_subscriber.rs"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tonic = { version = "^0.10.2"}
+tokio = { version = "^1.35.0", features = ["rt-multi-thread", "macros"] }
+tokio-stream = "^0.1.14"
+prost = "^0.12.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+
+[build-dependencies]
+tonic-build = "^0.10.2"

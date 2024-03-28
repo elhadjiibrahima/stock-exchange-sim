@@ -1,0 +1,45 @@
+{
+    "investors": [
+        {
+            "inv_id": 100001, 
+            "account_name": "Alice",
+            "password": "password_alice",
+            "stocks": {
+                "AAPL": 100,
+                "GOOGL": 50
+            },
+            "cash_amount": 50000.0
+        },
+        {
+            "inv_id": 100002,
+            "account_name": "Bob",
+            "password": "password_bob",
+            "stocks": {
+                "MSFT": 75,
+                "AMZN": 50
+            },
+            "cash_amount": 7000.0
+        },
+        {
+            "inv_id": 100003,
+            "account_name": "Charlie",
+            "password": "password_charlie",
+            "stocks": {
+                "AMZN": 50
+            },
+            "cash_amount": 10000.0
+        },
+        {
+            "inv_id": 100004,
+            "account_name": "David",
+            "password": "password_david",
+            "stocks": {
+                "AAPL": 50,
+                "GOOGL": 50,
+                "MSFT": 50,
+                "AMZN": 50
+            },
+            "cash_amount": 20000.0
+        }
+    ]
+}

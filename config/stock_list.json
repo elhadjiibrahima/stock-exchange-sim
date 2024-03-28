@@ -1,0 +1,33 @@
+{
+    "stocks": [
+      {
+        "ticker": "AAPL",
+        "close_price": 150.0,
+        "lot_size": 50,
+        "mpf": 10.0,
+        "name": "Apple Inc."
+      },
+      {
+        "ticker": "MSFT",
+        "close_price": 300.0,
+        "lot_size": 25,
+        "mpf": 10.0,
+        "name": "Microsoft Corporation"
+      },
+      {
+        "ticker": "GOOGL",
+        "close_price": 2500.0,
+        "lot_size": 10,
+        "mpf": 10.0,
+        "name": "Alphabet Inc."
+      },
+      {
+        "ticker": "AMZN",
+        "close_price": 500.0,
+        "lot_size": 10,
+        "mpf": 10.0,
+        "name": "Amazon.com, Inc."
+      }
+    ]
+  }
+  

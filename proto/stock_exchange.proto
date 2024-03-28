@@ -1,0 +1,118 @@
+syntax = "proto3";
+
+package stockexchange;
+
+service StockExchangeService {
+    rpc SendOrder(stream RpcOrderRequest) returns (stream RpcOrderResponse);
+    rpc Subscribe(stream RpcSubscribeRequest) returns (stream RpcSubscribeResponse);
+}
+
+enum RpcLimitOrMarket {
+    LIMIT = 0;
+    MARKET = 1;
+}
+enum RpcTimeInForce {
+    DAY = 0;
+    IOC = 1;
+}
+
+enum RpcDirection {
+    BUY = 0;
+    SELL = 1;
+}
+
+message RpcOrderRequest {
+    message Login {
+        uint64 seqnum = 1;
+        uint64 investor_id = 2;
+        string password = 3;
+    }
+    message NewOrder {
+        uint64 seqnum = 1;
+        string ticker = 2;
+        RpcDirection direction = 3;
+        uint32 size = 4;
+        float price = 5;
+        RpcLimitOrMarket limit_or_market = 6;
+        RpcTimeInForce time_in_force = 7;
+    }
+    message CancelOrder {
+        uint64 seqnum = 1;
+        uint64 order_id = 2;
+    }
+    oneof request {
+        Login login = 1;
+        NewOrder new_order = 2;
+        CancelOrder cancel_order = 3;
+    }
+}
+
+message RpcOrderResponse {
+    message LoginAck {
+        uint64 seqnum = 1;
+    }
+    message LoginRej {
+        uint64 seqnum = 1;
+        string reason = 2;
+    }
+    message OrderAck {
+        uint64 seqnum = 1;
+        uint64 order_id = 2;
+    }
+    message OrderRej {
+        uint64 seqnum = 1;
+        string reason = 2;
+    }
+    message OrderFill {
+        uint64 order_id = 1;
+        float price = 2;
+        uint32 size = 3;
+    }
+    message OrderDead {
+        uint64 order_id = 1;
+    }
+    message CancelRej {
+        uint64 seqnum = 1;
+        string reason = 2;
+    }
+    oneof response {
+        LoginAck login_ack = 1;
+        LoginRej login_rej = 2;
+        OrderAck ack = 3;
+        OrderRej rej = 4;
+        OrderFill fill = 5;
+        OrderDead dead = 6;
+        CancelRej cancel_rej = 7;
+    }
+}
+
+
+// Subscribe 
+message RpcSubscribeRequest {
+}
+message RpcSubscribeResponse {
+    message OrderAdded {
+        uint64 order_id = 1;
+        string ticker = 2;
+        RpcDirection direction = 3;
+        float limit_price = 4;
+        uint32 size = 5;
+    }
+    message OrderExecuted {
+        uint64 order_id  = 1;
+        string ticker = 2;
+        float execution_price = 3;
+        uint32 execution_size = 4;
+    }
+    message OrderRemoved {
+        uint64 order_id = 1;
+    }
+    // each response is an event (live or historical)
+    oneof response {
+        OrderAdded added = 1;
+        OrderExecuted executed = 2;
+        OrderRemoved removed = 3;
+    }
+}
+
+

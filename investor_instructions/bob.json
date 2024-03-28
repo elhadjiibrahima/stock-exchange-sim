@@ -1,0 +1,32 @@
+{
+    "id": 100002,
+    "password": "password_bob",
+    "instructions": [
+      {
+        "ticker": "MSFT",
+        "direction": "Sell",
+        "size": 75,
+        "price": 200.0,
+        "limit_or_market": "Limit",
+        "time_in_force": "Day"
+      },
+      {
+        "ticker": "MSFT",
+        "direction": "Sell",
+        "size": 25,
+        "price": 0,
+        "limit_or_market": "Market",
+        "time_in_force": "Day"
+      },
+      {
+        "ticker": "AMZN",
+        "direction": "Sell",
+        "size": 50,
+        "price": 500.0,
+        "limit_or_market": "Limit",
+        "time_in_force": "Day"
+      }
+
+    ]
+  }
+  
