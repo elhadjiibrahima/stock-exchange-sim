@@ -1,0 +1,12 @@
+# Stocks disponibles
+euro:10
+material:5
+product:0
+
+# Processus
+buy_materiel:(euro:8):(material:1):10
+build_product:(material:1):(product:1):30
+delivery:(product:1):(client_content:1):20
+
+# Optimisation
+optimize:(time;client_content)
