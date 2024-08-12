@@ -10,7 +10,7 @@
 
 ## 0. Brief
 
-This is a project in the [01 Edu](https://01-edu.org/) system, introducing the idea of a [process chain](https://en.wikipedia.org/wiki/Event-driven_process_chain). It's an optional extra, at least for us at 01Founders in London, 2024. It can be done in any compiled language. We chose Go.
+This is a project in the [Zone01 Edu Dakar](https://learn.zone01dakar.sn/) system, introducing the idea of a [process chain](https://en.wikipedia.org/wiki/Event-driven_process_chain). It's an optional extra, at least for us at 01Founders in Senegal, 2024. It can be done in any compiled language. We chose Go.
 
 According to the [instructions](https://github.com/01-edu/public/tree/master/subjects/stock-exchange-sim), we need to write a program, `stock`, that takes one or two command-line arguments.
 
