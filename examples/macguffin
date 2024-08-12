@@ -1,0 +1,9 @@
+soylent_green:31
+
+d:(soylent_green:1):(payoff:2):1
+a:(soylent_green:1):(plot_armor:1):1
+b:(soylent_green:1):(unobtainium:2):1
+c:(plot_armor:2;unobtainium:1):(red_herring:1):1
+e:(red_herring:3;payoff:1):(macguffin:1):1
+
+optimize:(macguffin)

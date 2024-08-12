@@ -1,0 +1,10 @@
+bitcoin:1
+
+buy_expensive_matryushka:(bitcoin:1):(small_matryushka:1):1
+open_small_matryushka:(small_matryushka:1):(very_small_matryushka:1):1
+open_very_small_matryushka:(very_small_matryushka:1):(tiny_matryushka:1):1
+open_tiny_matryushka:(tiny_matryushka:1):(teeny_tiny_matryushka:1;locked_matryushka:1):1
+open_teeny_tiny_matryushka:(teeny_tiny_matryushka:1):(mini_dynamite:1):1
+open_locked_matryushka:(locked_matryushka:1;mini_dynamite:1):(ant:1;bitcoin:1):1
+
+optimize:(ant)

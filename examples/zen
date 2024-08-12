@@ -1,0 +1,9 @@
+attention:5
+
+stare_at_wall:(attention:1):(nothingness:1):18
+read_diamond_sutra:(attention:1):(insight:1):74
+chant:(attention:1):(cameradery:1):9
+attain_enlightenment:(nothingness:3;insight:1;cameradery:1):(enlightenment:1):29
+do_the_dishes:(enlightenment:1):(dishes:1):4
+
+optimize:(time;dishes)
