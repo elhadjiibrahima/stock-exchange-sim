@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
-
 	"stockexchange/production"
+	//"strconv"
 )
 
 func main() {
@@ -18,7 +18,8 @@ func main() {
 	// if err != nil {
 	// 	fmt.Println("Error while parsing `" + arg[2] + "`")
 	// 	os.Exit(0)
-	//}
+	// }
+	// fmt.Printf("Timer set to: %.2f seconds\n", timer)
 	data, err := os.ReadFile("examples/simple")
 	if err != nil {
 		fmt.Println("File reading error", err)
